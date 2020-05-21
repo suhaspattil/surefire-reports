@@ -1,0 +1,119 @@
+maven reports
+
+goal site
+		surefire-report:report
+		
+	to run test cases:
+	maven site plugin
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-site-plugin</artifactId>
+    <version>3.9.0</version>
+</dependency>
+
+
+
+
+<build>
+<plugins>
+<plugin>
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>3.0.0-M4</version>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-site-plugin</artifactId>
+<version>3.9.0</version>
+</plugin>
+</plugins>
+
+</build>
+		
+		<reporting>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-site-plugin</artifactId>
+<version>3.9.0</version>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-project-info-reports-plugin</artifactId>
+<version>3.0.0</version>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-jxr-plugin</artifactId>
+<version>3.0.0</version>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-report-plugin</artifactId>
+<version>3.0.0-M4</version>
+</plugin>
+</plugins>
+</reporting>
+
+
+*********************************************************************************************plugin copy
+*****************************************surefire-plugin
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M4</version>
+</dependency>
+****************************************************site plugin
+
+
+--all dependencies
+<properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <build>
+  	<plugins>
+  		<plugin>
+  			<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+    		<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-surefire-plugin</artifactId>
+    		<version>3.0.0-M4</version>
+  		</plugin>
+    	<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.9.0</version>
+        </plugin>
+  	</plugins>
+  
+  </build>
+  
+  <reporting>
+    <plugins>
+    	<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.9.0</version>
+        </plugin>
+    	<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-project-info-reports-plugin</artifactId>
+            <version>3.0.0</version>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jxr-plugin</artifactId>
+            <version>3.0.0</version>
+        </plugin>
+        <plugin>
+        	<groupId>org.apache.maven.plugins</groupId>
+        	<artifactId>maven-surefire-report-plugin</artifactId>
+        	<version>3.0.0-M4</version>
+      	</plugin>
+    </plugins>
+  </reporting>
